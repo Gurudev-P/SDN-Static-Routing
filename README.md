@@ -15,3 +15,19 @@ The controller installs static flow rules in switches to control packet forwardi
 
 ## Output
 0% packet loss
+
+## How to Run
+
+1. Start controller:
+   python -m ryu.cmd.manager controller.py
+
+2. Run Mininet:
+   sudo mn --custom topo.py --topo static_topo --controller remote --switch ovsk,protocols=OpenFlow13
+
+3. Test:
+   pingall
+
+## Output
+0% packet loss
+
+Packet delivery verified using pingall command.
